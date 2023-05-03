@@ -1,0 +1,15 @@
+fail = open(input("Sisesta failinimi: "), encoding="UTF-8")
+mündid = []
+for rida in fail:
+    mündid.append(rida.strip())
+fail.close()
+
+
+def pronksikarva_summa(mündid):
+    x = 0
+    for i in range(0,len(mündid),1):
+        if int(mündid[i]) < 10:
+            x += int(mündid[i])
+    return x
+    
+print("Hoiupõrsasse läheb " + str(pronksikarva_summa(mündid)) + " senti.")
