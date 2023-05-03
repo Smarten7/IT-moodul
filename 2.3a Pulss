@@ -1,0 +1,50 @@
+vanus = int(input("Sisestage enda vanus: "))
+sugu = str(input("Sisestage enda sugu: "))
+treeningu_tüüp = int(input("Sisestage treeningu tüüp: "))
+
+if sugu == "m" or sugu == "M":
+    max_pulss_m = 220 - vanus
+    if treeningu_tüüp == 1:
+        tervisetreening1 = round(0.5 * max_pulss_m)
+        tervisetreening2 = round(0.7 * max_pulss_m)
+    else:
+        pass
+        if treeningu_tüüp == 2:
+            tervisetreening1 = round(0.7 * max_pulss_m)
+            tervisetreening2 = round(0.8 * max_pulss_m)
+        else:
+            pass
+            if treeningu_tüüp == 3:
+                tervisetreening1 = round(0.8 * max_pulss_m)
+                tervisetreening2 = round(0.87 * max_pulss_m)
+else:
+    pass
+if sugu == "n" or sugu == "N":
+    max_pulss_n = 206 - 0.88 * vanus
+    if treeningu_tüüp == 1:
+        tervisetreening1 = round(0.5 * max_pulss_n)
+        tervisetreening2 = round(0.7 * max_pulss_n)
+    else:
+        pass
+        if treeningu_tüüp == 2:
+            tervisetreening1 = round(0.7 * max_pulss_n)
+            tervisetreening2 = round(0.8 * max_pulss_n)
+        else:
+            pass
+            if treeningu_tüüp == 3:
+                tervisetreening1 = round(0.8 * max_pulss_n)
+                tervisetreening2 = round(0.87 * max_pulss_n)
+else:
+    pass
+if treeningu_tüüp == 1:
+    print("Pulsisagedus peaks olema vahemikus " + str(tervisetreening1) + " kuni " + str(tervisetreening2))
+else:
+    pass
+if treeningu_tüüp == 2:
+    print("Pulsisagedus peaks olema vahemikus " + str(tervisetreening1) + " kuni " + str(tervisetreening2))
+else:
+    pass
+if treeningu_tüüp == 3:
+    print("Pulsisagedus peaks olema vahemikus " + str(tervisetreening1) + " kuni " + str(tervisetreening2))
+else:
+    pass
