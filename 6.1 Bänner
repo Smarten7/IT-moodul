@@ -1,0 +1,8 @@
+x = int(input("Mitu korda soovite reklaamlauset kuvada? "))
+lause = input("Sisestage reklaamlause: ")
+
+def banner(lause):
+    return lause.upper()
+
+for i in range(0,x,1):
+    print(banner(lause))
