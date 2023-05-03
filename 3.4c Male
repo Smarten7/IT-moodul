@@ -1,0 +1,7 @@
+täisarv = int(input("Sisestage täisarv: "))
+nisuteri = 1
+nisuteri_kokku = 2 ** täisarv / 2
+
+while nisuteri < nisuteri_kokku:
+    nisuteri *= 2
+print(nisuteri)
