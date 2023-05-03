@@ -1,0 +1,8 @@
+ringid = abs(int(input("Sisesta ringide arv: ")))
+i = 1
+porgandid = 0
+while i <= ringid:
+    x = i * (i + 1) / 2
+    i += 1
+    porgandid += x
+print(int(porgandid))
