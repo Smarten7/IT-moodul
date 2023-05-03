@@ -1,0 +1,9 @@
+from datetime import *
+
+fail = open(input("Sisesta failinimi: "), encoding="UTF-8")
+õpilased = []
+for rida in fail:
+    õpilased.append(str(rida))
+fail.close()
+
+print(õpilased[datetime.now().day - 1])
