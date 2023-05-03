@@ -1,0 +1,169 @@
+from tkinter import *
+
+raam = Tk()
+raam.title("Malelaud")
+
+tahvel = Canvas(height=512 , width=576)
+x1 = 0
+y1 = 0
+x2 = 64
+y2 = 64
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) == 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 64
+x2 = 64
+y2 = 128
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) != 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 128
+x2 = 64
+y2 = 192
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) == 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 192
+x2 = 64
+y2 = 256
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) != 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 256
+x2 = 64
+y2 = 320
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) == 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 320
+x2 = 64
+y2 = 384
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) != 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 384
+x2 = 64
+y2 = 448
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) == 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+x1 = 0
+y1 = 448
+x2 = 64
+y2 = 512
+i1 = 0
+while i1 < 8:
+    if (i1 % 2) != 0:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="white")
+        i1 += 1
+    else:
+        x1 += 64
+        y1 += 0
+        x2 += 64
+        y2 += 0
+        tahvel.create_rectangle(x1,y1,x2,y2, fill="black")
+        i1 += 1
+tahvel.pack()
+
+raam.mainloop()
