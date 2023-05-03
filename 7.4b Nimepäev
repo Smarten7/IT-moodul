@@ -1,0 +1,14 @@
+from urllib.request import urlopen
+
+kuu = input("Sisesta kuu: ")
+kuu = kuu.replace("ä", "a")
+päev = int(input("Sisesta päev: "))
+
+leht = urlopen("https://kodu.ut.ee/~eno/mooc/" + kuu)
+
+baidid = leht.read()
+nimed = baidid.decode()
+leht.close()
+nimed = nimed.splitlines()
+
+print(str(päev) + ". mai on nimepäev järgmiste nimedega inimestel: \n" + nimed[(päev - 1)].strip("""b'"""))
