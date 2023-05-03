@@ -1,0 +1,19 @@
+failinimi = open(input("Sisesta failinimi: "), encoding = "UTF-8")
+fail = failinimi.read()
+tuleb = fail.count("+")
+kutsutud = fail.count("+") + fail.count("?")
+failinimi.close()
+
+
+def eelarve(inimesed):
+    if inimesed == kutsutud:
+        eelarve = inimesed * 10 + 55
+        return eelarve
+    elif inimesed == tuleb:
+        eelarve = inimesed * 10 + 55
+        return eelarve
+    
+print("Kutsutud on " + str(kutsutud) + " inimest")
+print(str(tuleb) + " inimest tuleb")
+print("Maksimaalne eelarve: " + str(eelarve(kutsutud)) + " eurot")
+print("Minimaalne eelarve: " + str(eelarve(tuleb)) + " eurot")
