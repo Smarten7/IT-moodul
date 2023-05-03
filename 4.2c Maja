@@ -1,0 +1,37 @@
+from tkinter import *
+
+raam = Tk()
+raam.title("Maja")
+
+tahvel = Canvas(height=500 , width=500)
+
+tahvel.create_rectangle(0,0,500,250, fill="lightblue")
+tahvel.create_rectangle(0,250,500,500, fill="green")
+tahvel.create_rectangle(126,196,375,380, fill="brown")
+
+tahvel.create_rectangle(232,325,270,380, fill="black")
+tahvel.create_rectangle(234,327,268,380, fill="brown")
+tahvel.create_oval(259,351,264,356, fill="black")
+
+tahvel.create_line(60,242,438,242, width=4, fill="black")
+a = 60
+b = 242
+c = 438
+i = 0
+while i < 46:
+    a += 4
+    b -= 3
+    c -= 4
+    tahvel.create_line(a,b,c,b, width=4, fill="black")
+    i += 1
+tahvel.create_line(325,113,325,174, width=20, fill="brown")
+
+tahvel.create_rectangle(151,319,213,351, fill="black")
+tahvel.create_rectangle(153,321,211,349, fill="lightblue")
+
+tahvel.create_rectangle(287,319,349,351, fill="black")
+tahvel.create_rectangle(289,321,347,349, fill="lightblue")
+
+tahvel.pack()
+
+raam.mainloop()
