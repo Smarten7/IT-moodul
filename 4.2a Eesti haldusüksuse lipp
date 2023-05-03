@@ -1,0 +1,19 @@
+from tkinter import *
+
+raam = Tk()
+raam.title("Lipp")
+
+tahvel = Canvas(height=313 , width=400)
+
+tahvel.create_rectangle(0,0,400,313, fill="green")
+tahvel.create_rectangle(128,0,220,313, fill="white")
+tahvel.create_rectangle(0,111,400,204, fill="white")
+tahvel.create_rectangle(128,111,221,204, fill="red")
+tahvel.create_oval(138,144,211,200, fill="gold")
+tahvel.create_line(175,115,175,143, width=6, fill="gold")
+tahvel.create_oval(133,120,170,140, fill="gold")
+tahvel.create_oval(180,120,218,140, fill="gold")
+
+tahvel.pack()
+
+raam.mainloop()
