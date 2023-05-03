@@ -1,0 +1,14 @@
+kuupäev = input("Sisesta kuupäev kujul DD.MM.YYYY: ")
+
+def kuu_nimi(kuu):
+    kuud = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"]
+    kuu_nimi = kuud[kuu - 1]
+    return kuu_nimi    
+
+def kuupäev_sõnena(kuupäev):
+    kuupäev = kuupäev.split(".")
+    x = kuu_nimi(int(kuupäev[1]))
+    kuupäev_sõnena = (str(kuupäev[0]) + ". " + x + " " + str(kuupäev[2]) + ". a")
+    return kuupäev_sõnena
+
+print(str(kuupäev_sõnena(kuupäev)))
