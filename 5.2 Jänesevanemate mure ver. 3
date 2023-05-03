@@ -1,0 +1,12 @@
+ringid = int(input("Sisestage ringide arv: "))
+while ringid < 0:
+    print("Ringide arv ei saa olla negatiivne.\n")
+    ringid = int(input("Sisestage ringide arv: "))
+
+if (ringid % 2) != 0:
+    ringid -= 1
+    
+porgandid = 0
+for a in range(2, (ringid+2), 2):
+    porgandid += a
+print(porgandid)
