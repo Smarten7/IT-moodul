@@ -1,0 +1,5 @@
+ainepunktid = int(input("Sisestage ainepunktide arv:"))
+nädalad = int(input("Sisestage nädalate arv:"))
+ajakulu = ainepunktid * 26 / nädalad
+rounded = round(ajakulu)
+print(rounded)
