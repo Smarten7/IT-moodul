@@ -1,0 +1,9 @@
+külalised = int(input("Sisestage külaliste arv: "))
+n = 0
+def tervitus(n):
+    tervitus = '''Võõrustaja: "Tere!"\n''' + "Täna " + str((n + 1)) + '. kord tervitadam mõtiskleb võõrustaja.\nKülaline: "Tere, suur tänu kutse eest!"'
+    print(tervitus)
+for i in range(0,külalised,1):
+    tervitus(n)
+    n += 1
+    
