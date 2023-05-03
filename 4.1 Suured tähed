@@ -1,0 +1,5 @@
+nimi = str(input("Sisestage oma ees-ja perekonnanimi: "))
+
+suured_tähed = nimi.title()
+
+print(suured_tähed)
