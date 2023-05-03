@@ -1,0 +1,13 @@
+from tkinter import *
+
+raam = Tk()
+raam.title("Liiklusmärk")
+
+tahvel = Canvas(height=500 , width=500)
+
+tahvel.create_oval(0,0,500,500, fill="red")
+tahvel.create_line(25,250,475,250, width=50, fill="white")
+
+tahvel.pack()
+
+raam.mainloop()
