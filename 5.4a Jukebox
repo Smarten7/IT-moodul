@@ -1,0 +1,14 @@
+fail = open(input("Sisesta failinimi: "), encoding="UTF-8")
+
+laulud = []
+
+järg = 0
+for laul in fail:
+    järg += 1
+    print(str(järg) + ". " + str(laul))
+    laulud.append(str(laul))
+fail.close()
+
+number = int(input("Vali muusikapala number: "))
+
+print(laulud[number-1])
