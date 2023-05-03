@@ -1,0 +1,12 @@
+kutsutud = int(input("Mitu inimest on kutsutud? "))
+tuleb = int(input("Mitu inimest tuleb? "))
+
+def eelarve(inimesed):
+    if inimesed == kutsutud:
+        eelarve = inimesed * 10 + 55
+        return eelarve
+    elif inimesed == tuleb:
+        eelarve = inimesed * 10 + 55
+        return eelarve
+print("Maksimaalne eelarve: " + str(eelarve(kutsutud)) + " eurot")
+print("Minimaalne eelarve: " + str(eelarve(tuleb)) + " eurot")
