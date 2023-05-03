@@ -1,0 +1,9 @@
+from random import randint
+
+täringud = int(input("Täringute arv: "))
+a = 0
+while a < täringud:
+    print(randint(1, 6))
+    a += 1
+    if a == täringud:
+        break
