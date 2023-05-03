@@ -1,0 +1,16 @@
+from random import randint
+pöialpoisid = int(input("Mitu pöialpoissi tahab õunu? "))
+if 0 <= pöialpoisid <= 7:
+    pass
+else:
+    print("Pöialpoisse saab olla 0 kuni 7")
+    
+x = 1
+lumivalgekesele = 0
+while x <= pöialpoisid:
+    pöialpoiss = randint(1, 2)
+    print(pöialpoiss)
+    x += 1
+    lumivalgekesele += pöialpoiss
+
+print("Lumivalgekesele jäi " + str(14 - lumivalgekesele))
