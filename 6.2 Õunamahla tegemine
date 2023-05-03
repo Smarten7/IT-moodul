@@ -1,0 +1,4 @@
+def mahlapakkide_arv(õunte_kogus):
+    mahlapakkide_arv = float(õunte_kogus) * 0.4 /3
+    return round(mahlapakkide_arv)
+print(mahlapakkide_arv(input("Sisesta õunte kogus kilogrammides: ")))
