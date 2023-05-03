@@ -1,0 +1,10 @@
+fail = open("konto.txt", encoding="UTF-8")
+
+a = []
+
+for rida in fail:
+    if float(rida) < 0:
+        continue
+    else:
+        print(rida)
+fail.close()
