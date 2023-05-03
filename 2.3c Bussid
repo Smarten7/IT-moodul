@@ -1,0 +1,14 @@
+import math
+
+inim_arv = int(input("Inimeste arv: "))
+bussi_kohad = int(input("Kohtade arv: "))
+
+busse_vaja = math.ceil(float(inim_arv / bussi_kohad))
+if busse_vaja < 1:
+    busse_vaja = 1
+
+viimane_buss = int(inim_arv % bussi_kohad)
+if viimane_buss == 0:
+    viimane_buss = bussi_kohad
+print("Busse vaja: " + str(busse_vaja))
+print("Viimases bussis on inimesi: " + str(viimane_buss))
