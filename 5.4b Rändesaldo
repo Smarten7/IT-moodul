@@ -1,0 +1,30 @@
+fail = open("sisseränne.txt", encoding="UTF-8")
+sisse = []
+for rida in fail:
+    sisse.append(int(rida))
+fail.close()
+
+fail = open("väljaränne.txt", encoding="UTF-8")
+välja = []
+for rida in fail:
+    välja.append(int(rida))    
+fail.close()
+
+saldo = []
+for i in range(0, len(sisse), 1):
+    vahe = sisse[i] - välja[i]
+    saldo.append(vahe)
+print(saldo)
+
+suurim_saldo = max(saldo)
+if suurim_saldo < 0:
+    print("Positiivse rändesaldoga aastaid ei ole.")
+    
+aasta = 0
+a = []
+for i in range(0, len(saldo), 1):
+    aasta += 1
+    if saldo[i] < 0:
+        continue
+    if saldo[i] == max(saldo):
+        print("Suurim positiivne rändesaldo oli " + str(aasta) + ". " + "aastal.")
