@@ -1,0 +1,20 @@
+fail = open(input("Sisestage failinimi: "), encoding = "UTF-8")
+
+def inimeste_arv(naiskondade_arv,tugiisikute_arv):
+    inimeste_arv = int(naiskondade_arv) * (22 + int(tugiisikute_arv))
+    return inimeste_arv
+    
+naiskondade_arv = []
+for rida in fail:
+    naiskondade_arv.append(rida.strip("\n"))
+    
+kokku = 0
+for x in range(0,len(naiskondade_arv),1):
+    if int(naiskondade_arv[x]) < 15:
+        tugiisikute_arv = 10
+    else:
+        tugiisikute_arv = 8
+    print("Turniiril oli inimesi: " + str(inimeste_arv(naiskondade_arv[x],tugiisikute_arv)))
+    kokku += inimeste_arv(naiskondade_arv[x],tugiisikute_arv)
+    
+print("Kokku oli kõigil turniiridel inimesi: " + str(kokku))
