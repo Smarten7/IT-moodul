@@ -1,0 +1,11 @@
+punktisumma = float(input("Palun sisesta punktisumma: "))
+if punktisumma < 0 or punktisumma > 100:
+    print("Vigane punktisumma")
+else:
+    pass
+if punktisumma >= 85 and punktisumma <= 100:
+    print("Vastuvõtt tagatud")
+if punktisumma >= 66 and punktisumma < 85:
+    print("Kandideerimine vastuvõtule")
+if punktisumma < 66 and punktisumma >= 0:
+    print("Vähem kui kandideerimiseks vajalik")
