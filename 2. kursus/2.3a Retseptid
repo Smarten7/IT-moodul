@@ -1,0 +1,20 @@
+fail = open("retseptid.txt", encoding="UTF-8")
+
+retseptid_tabel = [] # Tühi järjend, kuhu lisame retseptid
+
+for rida in fail:    # Iga rea jaoks failist
+    koostisosad = []     # Kogume reas olevad koostisosad järjendisse
+    osad = rida.split(",") # Jupitame rea koma koha pealt
+
+    for osa in osad: # Vaatame iga juppi eraldi
+        koostisosad.append(osa.strip()) # Lisame reas olevad koostisosad järjendisse
+
+    retseptid_tabel.append(koostisosad) # Lisame koostisosade järjendi retseptide tabelisse
+
+fail.close()
+
+print("Retseptid, milleks on vaja maasikaid ja suhkrut:")
+
+for osa in retseptid_tabel:
+    if "suhkur" in osa and "maasikad" in osa:
+        print(osa)
