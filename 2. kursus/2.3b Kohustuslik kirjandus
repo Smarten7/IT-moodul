@@ -1,0 +1,34 @@
+import math
+
+fail = open("raamatud.txt", encoding="UTF-8")
+
+kirjandus_tabel = [] # Tühi järjend, kuhu lisame raamatud
+
+for rida in fail:    # Iga rea jaoks failist
+    raamat = []     # Kogume reas olevad raamatu pealkirja ja lehekülgede arvu järjendisse
+    osad = rida.split(":") # Jupitame rea semikooloni koha pealt
+
+    pealkiri = osad[0].strip() # Eraldame pealkirja
+    leheküljed = int(osad[1].strip()) # Eraldame lehekülgede arvu
+
+    raamat.append(pealkiri) # Lisame reas olevad raamatu pealkirja ja lehekülgede arvu järjendisse
+    raamat.append(leheküljed)
+
+    kirjandus_tabel.append(raamat) # Lisame raamatute järjendi kirjanduse tabelisse
+
+fail.close()
+
+print("Raamatud, mille lugemiseks kulub rohkem kui neli päeva:")
+for rida in kirjandus_tabel:
+    pealkiri = rida[0]
+    aeg = math.ceil(rida[1] / 60)
+    if aeg > 4:
+        print(str(pealkiri) + " - " + str(aeg) + " päeva")
+
+kogu_aeg = 0
+for rida in kirjandus_tabel:
+    aeg = rida[1] * 2 / 60
+    kogu_aeg += aeg
+
+kogu_aeg = round(kogu_aeg, 1)
+print("Kõigi raamatute lugemiseks kulub " + str(kogu_aeg) + "h.")
