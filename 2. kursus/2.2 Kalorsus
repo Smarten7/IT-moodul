@@ -1,0 +1,26 @@
+fail = open("kalorid.txt", encoding="UTF-8")
+
+toitude_tabel = []
+
+for rida in fail: # iga rea jaoks failist
+    korra_grammid = [] # kogume ühe toidukorra info
+    osad = rida.split() # tühikute kohalt osadeks
+
+    for osa in osad: # osade kaupa
+        korra_grammid.append(int(osa)) # järjekordne info juurde
+
+    toitude_tabel.append(korra_grammid) # toidukorra järjend juurde
+
+fail.close()
+
+i = 0
+summa = 0
+for rida in toitude_tabel:
+    susivesikud = int(toitude_tabel[i][0]) * 4
+    valgud = int(toitude_tabel[i][1]) * 4
+    rasvad = int(toitude_tabel[i][2]) * 9
+    i += 1
+
+    summa += (susivesikud+valgud+rasvad)
+
+print(summa)
