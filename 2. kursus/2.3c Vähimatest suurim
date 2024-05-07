@@ -1,0 +1,5 @@
+def vahimatest_suurim(jarjend):
+    vahim = []
+    for osa in jarjend:
+        vahim.append(min(osa))
+    return(max(vahim))
