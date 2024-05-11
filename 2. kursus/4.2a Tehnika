@@ -1,0 +1,19 @@
+fail = open("tehnika.txt", encoding="UTF-8")
+
+tehnikate_tabel = []
+
+for rida in fail:
+    tehnika = []
+    osad = rida.split(" ")
+    for osa in osad:
+        osa = osa.replace("\n","")
+        tehnika.append(osa)
+    tehnikate_tabel.append(tehnika)
+fail.close()
+
+for tehnika in tehnikate_tabel:
+    vahe = int(tehnika[7]) - int(tehnika[1])
+    if vahe > 10:
+        print(str(tehnika[0]) + " - " + str(vahe) + "%")
+    else:
+        continue
