@@ -1,0 +1,15 @@
+def nummerda(korrused, korterid):
+    korrus = []
+    number = []
+    i = 1
+    q = 1
+    while i <= korrused:
+        number = []
+        while q <= korterid:
+            number.append(str(i)+str(q))
+            q += 1
+            print(number)
+        i += 1
+        q = 1
+        korrus.append(number)
+    return korrus
