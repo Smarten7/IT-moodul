@@ -1,0 +1,33 @@
+import math
+
+def sorteeri(fail):
+    fail = open(fail, encoding="UTF-8")
+    sonastik = {}
+    for rida in fail:
+        album = rida.split(";")
+        album[3] = album[3].replace("\n","")
+        x = math.floor((int(album[2])/10))*10
+        sonastik[x] = []    
+    fail.seek(0)
+    for rida in fail:
+        album = rida.split(";")
+        album[3] = album[3].replace("\n","")
+        x = math.floor((int(album[2])/10))*10
+        sonastik[x].append(album)
+    fail.close
+    return sonastik
+
+sonastik = sorteeri("albumid.txt")
+
+def kuva(sonastik):
+    tulemused = []
+    for element in sonastik:
+        enim_muunud = max(sonastik[element], key=lambda x: int(x[3]))
+        tulemus = (str(element) + ": " + str(len(sonastik[element])) + " album(it)" + " (" + enim_muunud[0] + " - " + enim_muunud[1] + ")")
+        tulemused.append(tulemus)
+    return tulemused
+
+i = 0
+for element in (kuva(sonastik)):
+    print(kuva(sonastik)[i])
+    i += 1
