@@ -1,0 +1,11 @@
+def keskmised(hinnete_tabel):
+    keskmised = []
+    for aine in hinnete_tabel:
+        hinded = 0
+        for element in aine:
+            if type(element) == int:
+                hinded += element
+        keskmine = hinded/((len(aine))-1)
+        keskmine = [aine[0], (round(keskmine, 1))]
+        keskmised.append(keskmine)
+    return keskmised
