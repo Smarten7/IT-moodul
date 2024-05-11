@@ -1,0 +1,35 @@
+fail = input("Sisestage andmebaasi faili nimi: ")
+tahised = input("Piiriületajad: ")
+
+tahised = tahised.split(" ")
+
+def failist_sonastik(fail):
+    fail = open(fail, encoding="UTF-8")
+    sonastik = {}
+    for rida in fail:
+        riik = rida.split(" ")
+        nimi = riik[1].replace("\n","")
+        sonastik[riik[0]] = nimi
+    return sonastik
+
+sonastik = failist_sonastik(fail)
+
+def tahised_nimedeks(tahised, sonastik):
+    nimed = []
+    for tahis in tahised:
+        try:
+            nimed.append(sonastik[tahis])
+        except KeyError:
+            nimed.append(None)
+            continue
+    return nimed
+
+
+q = 0
+for i in tahised_nimedeks(tahised, sonastik):
+    if (tahised_nimedeks(tahised, sonastik)[q]) == None:
+        print("Tundmatu maa")
+        q += 1
+    else:
+        print(tahised_nimedeks(tahised, sonastik)[q])
+        q += 1
