@@ -1,0 +1,7 @@
+def symbolite_sagedus(string):
+    loendus = {}
+    tahed = list(string)
+    for taht in tahed:
+        a = tahed.count(taht)
+        loendus[taht] = a
+    return loendus
