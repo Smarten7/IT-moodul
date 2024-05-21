@@ -1,0 +1,27 @@
+# Read the data from the CSV file without using pandas
+data = []
+with open('maalähedane.csv', 'r', encoding='utf-8') as file:
+    lines = file.readlines()
+    for line in lines:
+        parts = line.strip().split(';')
+        county = parts[0]
+        participants = list(map(int, parts[1:]))
+        data.append([county, participants])
+
+# Calculate the total number of participants per county and find the county with the maximum participants
+max_county = None
+max_participants = 0
+total_participants = 0
+
+for county_data in data:
+    county = county_data[0]
+    participants = county_data[1]
+    county_total = sum(participants)
+    total_participants += county_total
+    if county_total > max_participants:
+        max_participants = county_total
+        max_county = county
+
+# Print the results
+print(f"Kõige rohkem osalejaid - {max_county}, {max_participants} inimest.")
+print(f"Kokku on kursusel osalenud {total_participants} inimest.")
