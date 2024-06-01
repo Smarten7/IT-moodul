@@ -1,0 +1,22 @@
+def alla_ules(n):
+    if n % 2 == 1:
+        if n < 0:
+            return
+        elif n == 1:
+            print(n)
+            print("Põhi!")
+            print(0)
+        else:
+            print(n)
+            alla_ules(n - 2)
+            print(n - 1)            
+
+    if n % 2 == 0:
+        if n < 0:
+            return
+        elif n == 0:
+            print("Põhi!")
+        else:
+            print(n)
+            alla_ules(n - 2)
+            print(n - 1)
